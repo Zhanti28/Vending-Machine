@@ -1,26 +1,22 @@
 package se.lexicon;
 
-public final class Coke extends Product{
+public final class Coke extends Product {
 
-    private int id = 1;
-    private double price = 15.00;
-    private String productName = "Coca Cola";
-    private final String flavore = "cherry";
+    private String flavor;
 
     public Coke(int id, double price, String productName) {
         super(id, price, productName);
-        this.setId(id);
-        this.setPrice(price);
-        this.setProductName(productName);
+        this.flavor = "Cherry";
     }
 
     @Override
     public String examine() {
-        return "Item ID; " + id + "\nPrice: " + price + "\nProduct Name: " + productName + "\nFlavore: " + flavore;
+        return "Item ID: " + getId() + "\nPrice: " + getPrice() +
+                "\nProduct Name: " + getProductName() + "\nFlavor: " + flavor;
     }
 
     @Override
     public String use() {
-        return "";
+        return "You drink the " + getProductName() + ". Refreshing!";
     }
 }

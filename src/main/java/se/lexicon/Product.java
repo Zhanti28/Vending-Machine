@@ -46,7 +46,8 @@ public abstract class Product {
         this.productName = productName;
     }
 
-    public abstract String examine();
+
+    public  abstract String examine();
 
     public abstract String use();
 
